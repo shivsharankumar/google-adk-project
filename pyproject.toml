@@ -1,7 +1,7 @@
 [project]
 name = "google-adk-project"
 version = "0.1.0"
-description = "Add your description here"
+description = "Example agents built with the Google Agent Development Kit (ADK)."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

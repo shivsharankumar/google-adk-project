@@ -1,6 +1,5 @@
 import re
 import sqlite3
-from contextlib import contextmanager
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 from google.adk.tools import ToolContext
@@ -9,13 +8,6 @@ DB_PATH = Path(__file__).resolve().parent / "edtech.db"
 
 REFUND_WINDOWS_DAYS=7
 MAX_COMPLETION_PERCENT=20
-
-#Database helper
-@contextmanager
-def database():
-    if not DB_PATH.exists():
-        raise FileNotFoundError(f"Database file not found at {DB_PATH}")
-
 
 REFUND_POLICY = (
     f"Refund policy: a refund can be requested within {REFUND_WINDOWS_DAYS} days of purchase, "

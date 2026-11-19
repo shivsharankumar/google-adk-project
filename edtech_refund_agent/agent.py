@@ -9,6 +9,9 @@ from .tools import (
     get_refund_status,
 )
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 root_agent = LlmAgent(
     name="edtech_refund_agent",
